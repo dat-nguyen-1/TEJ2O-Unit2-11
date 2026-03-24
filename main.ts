@@ -2,28 +2,35 @@
  *
  * Created by: Dat Nguyen
  * Created on: Mar 2026
- * This program will compare 2 random numbers
+ * This program will compare 2 random numbers.
 */
 
 // Assign random numbers to variable
 let ranNum1: number = randint(0, 99)
 let ranNum2: number = randint(0, 99)
 
+// Reset Display
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
+
 // Handle button A press
 input.onButtonPressed(Button.A, function() {
     // Display ranNum1
-    basic.showString("Number 1: " + ranNum1.toString())
+    basic.clearScreen()
+    basic.showString("#1: " + ranNum1.toString())
 })
 
 // Handle button B press
 input.onButtonPressed(Button.B, function () {
     // Display ranNum2
-    basic.showString("Number 2: " + ranNum2.toString())
+    basic.clearScreen()
+    basic.showString("#2: " + ranNum2.toString())
 })
 
 // Handle shake
 input.onGesture(Gesture.Shake, function() {
     // Display ranNum1 is greater or less than ranNum2
+    basic.clearScreen()
     if (ranNum1 > ranNum2) {
         basic.showString(ranNum1.toString() + " > " + ranNum2.toString())
     } else {
