@@ -5,31 +5,35 @@
  * This program will compare 2 random numbers.
 */
 
-// Assign random numbers to variable
-let ranNum1: number = randint(0, 99)
-let ranNum2: number = randint(0, 99)
+// initialize variables
+let ranNum1: number = -1
+let ranNum2: number = -1
 
-// Reset Display
+// generate random integers
+ranNum1 = randint(0, 99)
+ranNum2 = randint(0, 99)
+
+// reset Display
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
-// Handle button A press
+// handle button A press
 input.onButtonPressed(Button.A, function() {
-    // Display ranNum1
+    // display 1st number
     basic.clearScreen()
     basic.showString("#1: " + ranNum1.toString())
 })
 
-// Handle button B press
+// handle button B press
 input.onButtonPressed(Button.B, function () {
-    // Display ranNum2
+    // display 2nd number
     basic.clearScreen()
     basic.showString("#2: " + ranNum2.toString())
 })
 
-// Handle shake
+// handle shake
 input.onGesture(Gesture.Shake, function() {
-    // Display ranNum1 is greater or less than ranNum2
+    // display comparing 1st number and 2nd number
     basic.clearScreen()
     if (ranNum1 > ranNum2) {
         basic.showString(ranNum1.toString() + " > " + ranNum2.toString())
@@ -37,6 +41,6 @@ input.onGesture(Gesture.Shake, function() {
         basic.showString(ranNum1.toString() + " < " + ranNum2.toString())
     }
 
-    // Reset display
+    // reset display
     basic.showIcon(IconNames.Happy)
 })
