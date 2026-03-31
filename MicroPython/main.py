@@ -5,10 +5,11 @@ This module will compare 2 random numbers.
 """
 
 from microbit import *
+import random
 
 # initialize variables
-random_number1 = randint(0. 99)
-random_number2 = randint(0. 99)
+random_number1 = random.randint(0, 99)
+random_number2 = random.randint(0, 99)
 
 # initialize display
 display.clear()
