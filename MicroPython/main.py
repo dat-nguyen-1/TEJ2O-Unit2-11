@@ -1,3 +1,4 @@
+
 """
 Created by: Dat Nguyen
 Created on: Mar 2026
@@ -22,12 +23,20 @@ while True:
         # display 1st number
         display.clear()
         display.scroll("#: " + str(random_number1))
+        
+        # reset display
+        display.clear()
+        display.show(Image.HAPPY)
 
     # handle button B press
     if button_b.was_pressed():
         # display 2nd number
         display.clear()
         display.scroll("#: " + str(random_number2))
+        
+        # reset display
+        display.clear()
+        display.show(Image.HAPPY)
 
     # handle shake
     if accelerometer.was_gesture("shake"):
