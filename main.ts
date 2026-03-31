@@ -6,12 +6,12 @@
 */
 
 // initialize variables
-let ranNum1: number = -1
-let ranNum2: number = -1
+let randomNumber1: number = -1
+let randomNumber2: number = -1
 
 // generate random integers
-ranNum1 = randint(0, 99)
-ranNum2 = randint(0, 99)
+randomNumber1 = randint(0, 99)
+randomNumber2 = randint(0, 99)
 
 // reset Display
 basic.clearScreen()
@@ -21,24 +21,24 @@ basic.showIcon(IconNames.Happy)
 input.onButtonPressed(Button.A, function() {
     // display 1st number
     basic.clearScreen()
-    basic.showString("#1: " + ranNum1.toString())
+    basic.showString("#1: " + randomNumber1.toString())
 })
 
 // handle button B press
 input.onButtonPressed(Button.B, function () {
     // display 2nd number
     basic.clearScreen()
-    basic.showString("#2: " + ranNum2.toString())
+    basic.showString("#2: " + randomNumber2.toString())
 })
 
 // handle shake
 input.onGesture(Gesture.Shake, function() {
     // display comparing 1st number and 2nd number
     basic.clearScreen()
-    if (ranNum1 > ranNum2) {
-        basic.showString(ranNum1.toString() + " > " + ranNum2.toString())
+    if (randomNumber1 > randomNumber2) {
+        basic.showString(randomNumber1.toString() + " > " + randomNumber2.toString())
     } else {
-        basic.showString(ranNum1.toString() + " < " + ranNum2.toString())
+        basic.showString(randomNumber1.toString() + " < " + randomNumber2.toString())
     }
 
     // reset display
