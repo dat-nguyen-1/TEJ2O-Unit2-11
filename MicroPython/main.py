@@ -1,4 +1,3 @@
-
 """
 Created by: Dat Nguyen
 Created on: Mar 2026
@@ -33,11 +32,11 @@ while True:
         # display 2nd number
         display.clear()
         display.scroll("#: " + str(random_number2))
-        
+
         # reset display
         display.clear()
         display.show(Image.HAPPY)
-    
+
     # handle shake
     if accelerometer.was_gesture("shake"):
         # display comparing 1st number and 2nd number
