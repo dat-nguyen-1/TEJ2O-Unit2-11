@@ -1,6 +1,6 @@
 """
-Created by: Mr. Coxall
-Created on: Sep 2020
+Created by: Dat Nguyen
+Created on: Mar 2026
 This module will compare 2 random numbers.
 """
 
